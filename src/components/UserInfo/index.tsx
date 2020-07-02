@@ -11,6 +11,8 @@ import {
   SettingsIcon,
 } from "./style";
 
+import Popover from "../Popover";
+
 interface Props {}
 
 const UserInfo: React.FC<Props> = (props) => {
@@ -26,9 +28,15 @@ const UserInfo: React.FC<Props> = (props) => {
       </Profile>
 
       <Icons>
-        <MicIcon />
-        <HeadphoneIcon />
-        <SettingsIcon />
+        <Popover title="Desativar microfone">
+          <MicIcon />
+        </Popover>
+        <Popover title="Desativar áudio">
+          <HeadphoneIcon />
+        </Popover>
+        <Popover title="Configurações de usuário">
+          <SettingsIcon />
+        </Popover>
       </Icons>
     </Container>
   );
